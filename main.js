@@ -11,7 +11,7 @@ canvas.height = rows*cellSize;
 
 let triangl = [
     ['0', '@', '0'],
-    ['@', '@', '@'],
+    ['@', 't', '@'],
     ['0', '0', '0']
 ]
 
@@ -55,7 +55,7 @@ function drawGrid(gridSize){
         }
     
     }
-    figure.rotateR();
+    figure.rotateL();
     figure.drawFigure();
     console.log(count + " of " + gameMap.length*gameMap[0].length)
 }

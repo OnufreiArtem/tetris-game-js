@@ -28,16 +28,16 @@ class Figure{
         this.blocks.forEach(block => {
             let localX = block.pos.x - this.origin.x;
             let localY = block.pos.y - this.origin.y;
-            block.pos = {x: this.origin.pos.x + (localX*0 - localY*1), y: this.origin.pos.y + (localX*1 + localY*0) }
+            block.pos = {x: this.origin.x + (localX*0 - localY*1), y: this.origin.y + (localX*1 + localY*0) }
         });
         
     }
 
     rotateL(){
         this.blocks.forEach(block => {
-            localX = block.pos.x - this.origin.x;
-            localY = block.pos.y - this.origin.y;
-            block.pos = {x: this.origin.pos.x + (localX*0 + localY*1), y: this.origin.pos.y + (localX*-1 + localY*0) }
+            let localX = block.pos.x - this.origin.x;
+            let localY = block.pos.y - this.origin.y;
+            block.pos = {x: this.origin.x + (localX*0 + localY*1), y: this.origin.y + (localX*-1 + localY*0) }
         });
     }
 
