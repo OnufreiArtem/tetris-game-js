@@ -1,6 +1,5 @@
 var canvas = document.getElementById("gamescreen");
 
-
 let cellSize = 32;
 let rows = 22;
 let columns = 12;
@@ -29,12 +28,14 @@ let fig2 = [
 ]
 
 var wallBlock = new Image();
-wallBlock.src = "file://C:/Users/hello/Desktop/tetris/images/wall.png";
+//wallBlock.src = "file://C:/Users/hello/Desktop/tetris/images/wall.png";
 
 var width  = canvas.width,
     height = canvas.height;
 
 var ctx = canvas.getContext("2d");
+
+let figure = new Figure("red", {x: 3, y: 4}, triangl, cellSize, ctx);
 
 ctx.fillStyle = "black";
 ctx.fillRect(0, 0, width, height);
@@ -54,6 +55,8 @@ function drawGrid(gridSize){
         }
     
     }
+    figure.rotateR();
+    figure.drawFigure();
     console.log(count + " of " + gameMap.length*gameMap[0].length)
 }
 
