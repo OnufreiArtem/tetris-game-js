@@ -45,7 +45,7 @@ class Figure{
         this.pos.y += 1 * this.cellSize;
 
         this.blocks.forEach(block => {
-            this.blocks.pos.y += 1;
+            block.pos.y += 1*this.cellSize;
         });
     }
 

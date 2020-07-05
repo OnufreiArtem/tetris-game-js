@@ -55,7 +55,9 @@ function drawGrid(gridSize){
         }
     
     }
-    figure.rotateL();
+    
+    figure.fall();
+
     figure.drawFigure();
     console.log(count + " of " + gameMap.length*gameMap[0].length)
 }
