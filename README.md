@@ -1,0 +1,1 @@
+You cannot play game now. Game can only draw map now
